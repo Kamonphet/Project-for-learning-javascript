@@ -1,0 +1,134 @@
+/* progress_scrolltotop */
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+p{
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+img{
+    width: 100%;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header{
+    width: 100%;
+    background: #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+header.active{
+    background: #ffffff;
+    box-shadow: 0 2px 5px gray;
+}
+header.active .logo{
+    color: black !important;
+}
+header.active li a{
+    color: black !important;
+}
+nav{
+    height: 7.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 2.5rem;
+    color: white;
+}
+.nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-list li{
+    list-style: none;
+    margin: 1.5rem;   
+}
+li a{
+    color: white;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+li a:hover{
+    border-bottom: 2px solid #ffc98d;
+    opacity: .8;
+    color: bisque;
+}
+section{
+    padding: 5rem 0;
+}
+.box{
+    /* border: 1px solid gray; */
+    padding: 2rem;
+    margin-top: -5rem;
+}
+h1{
+    font-size: 3rem;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex > *{
+    margin:5px;
+}
+section.header{
+    width: 100%;
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/2565919/pexels-photo-2565919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center no-repeat;
+    background-size: cover;
+    margin-bottom: 10rem;
+}
+.scroll-indicator{
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    visibility: hidden;
+}
+.progress{
+    width: 0%;
+    height: 4px;
+    background: #00d948;
+}
+.material-symbols-outlined {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: 3rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+    z-index: 111;
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: all 0.3s;
+}
+.showbtn{
+    opacity: 1;
+    transform: translateY(0);
+}

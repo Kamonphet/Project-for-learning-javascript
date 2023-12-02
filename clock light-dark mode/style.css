@@ -1,0 +1,42 @@
+/* clock light-dark mode */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Black Ops One';
+}
+:root{
+    --primary-color:#000;
+    --secondary-color:white;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.time{
+    font-size: 60px;
+}
+.toggle{
+    cursor: pointer;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0;
+    border-radius: 5px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 55%;
+}
+html.dark{
+    --primary-color:#fff;
+    --secondary-color:#333;
+}
+html.dark{
+    background: #111;
+    color: var(--primary-color);
+}
+html{
+    transition: all 0.5s ease-in;
+}
